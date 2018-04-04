@@ -11,9 +11,10 @@
 	$resultado = $mysqli->query($query);
 
 	if ($resultado->num_rows > 0) {
-		header("location:index.html");
+		header("location:index2.html");
 	}
 	else{
 		echo("Pagina no encontrada");
+	
 	}
 ?>
