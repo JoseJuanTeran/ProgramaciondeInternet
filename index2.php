@@ -1,3 +1,16 @@
+<?php
+session_start();
+//Validar que exista la variable de sesión del usuario
+if(!isset($_SESSION['nombre']))
+{
+header('Location:error.php');
+}
+else
+{
+echo "Has iniciado sesion: ".$_SESSION['nombre'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +57,7 @@
 						<li role="presentation"><a href="services.html">Servicio</a></li>
 						<li role="presentation"><a href="portfolio.html">Tramites</a></li>
 						<li role="presentation"><a href="contact.html">Contactos</a></li>
-            <li role="presentation"><a href="index.html">Cerrar Sesion</a></li>						
+            <li role="presentation"><a href="cerrarsesion.php">Cerrar Sesion</a></li>
 					</ul>
 				</div>
 			</div>
