@@ -57,7 +57,11 @@ echo "Has iniciado sesion: ".$_SESSION['nombre'];
 						<li role="presentation"><a href="services.html">Servicio</a></li>
 						<li role="presentation"><a href="portfolio.html">Tramites</a></li>
 						<li role="presentation"><a href="contact.html">Contactos</a></li>
+<<<<<<< HEAD:index2.php
             <li role="presentation"><a href="cerrarsesion.php">Cerrar Sesion</a></li>
+=======
+                        <li role="presentation"><a href="index.html">Cerrar Sesion</a></li>						
+>>>>>>> c158d63b64401b850f8a0dc1dd815727fc7dd426:index2.html
 					</ul>
 				</div>
 			</div>
