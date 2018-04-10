@@ -1,7 +1,7 @@
 <?php
 $hostname="localhost";
 $usuario="root";
-$password="root";
+$password="";
 $basededatos="sesiones";
 
 $mysqli = new mysqli($hostname, $usuario, $password,$basededatos);

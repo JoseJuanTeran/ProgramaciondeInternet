@@ -12,7 +12,9 @@
   $passwordf=$_REQUEST["password"];
   include 'conexion.php';
 
-    $query="SELECT * FROM login where usuario='$usuariof' and password='$passwordf'";
+  //print ("<P>$usuariof</P>");
+  //print ("<P>$passwordf</P>");
+$query="SELECT * FROM login where usuario='$usuariof' and password='$passwordf'";
     $resultado = $mysqli->query($query);
     if ($resultado->num_rows > 0) {
     //Crear una sesión en PHP

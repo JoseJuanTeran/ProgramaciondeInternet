@@ -3,30 +3,58 @@ $(document).ready( function () {
 
 	$("#button").on('click', function(event) {
 		event.preventDefault();
-		alert("Ingresando a Java Script");
+	//	alert("Ingresando a Java Script");
 		encripta();
 	});
+
+    $("#Agregar").on('click', function(event) {
+        event.preventDefault();
+    //  alert("Ingresando a Java Script");
+        encripta2();
+    });
 
 
 	function encripta(){
 
     var usu=document.getElementById("usuario").value;
 		//alert(usu);
-		var usuencriptado = Base64.encode(usu);
+	var usuencriptado = Base64.encode(usu);
 		//alert(usuencriptado);
 
     var pass=document.getElementById("password").value;
     //alert(pass);
     var passencriptado = Base64.encode(pass);
-  //  alert(passencriptado);
+   //alert(passencriptado);
 
     $.ajax({
         type: "POST",
-        url: "informacion.php",
+        url: "valida.php",
         success : function(){
-              window.location.href = "informacion.php?usuario=" + usuencriptado + "&password=" + passencriptado;
+              window.location.href = "valida.php?usuario=" + usuencriptado + "&password=" + passencriptado;
         }
     });
 
 	}
+
+    function encripta2(){
+
+    var usu=document.getElementById("usuario").value;
+        //alert(usu);
+    var usuencriptado = Base64.encode(usu);
+        //alert(usuencriptado);
+
+    var pass=document.getElementById("password").value;
+    //alert(pass);
+    var passencriptado = Base64.encode(pass);
+   //alert(passencriptado);
+
+    $.ajax({
+        type: "POST",
+        url: "agregar.php",
+        success : function(){
+              window.location.href = "agregar.php?usuario=" + usuencriptado + "&password=" + passencriptado;
+        }
+    });
+
+    }
 });
